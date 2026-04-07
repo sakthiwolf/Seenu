@@ -39,7 +39,7 @@ export const createProduct = createAsyncThunk<Product, { request: any; jwt: stri
     }
 );
 
-export const updateProduct = createAsyncThunk<Product, { productId: number; product: Product }>(
+export const updateProduct = createAsyncThunk<Product, { productId: string; product: Product }>(
     'sellerProduct/updateProduct',
     async ({ productId, product }, { rejectWithValue }) => {
         try {
@@ -55,7 +55,7 @@ export const updateProduct = createAsyncThunk<Product, { productId: number; prod
     }
 );
 
-export const deleteProduct = createAsyncThunk<void, number>(
+export const deleteProduct = createAsyncThunk<void, string>(
     'sellerProduct/deleteProduct',
     async (productId, { rejectWithValue }) => {
         try {

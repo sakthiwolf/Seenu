@@ -66,9 +66,10 @@ export default function ProductTable() {
   };
   const handleToggleStock = (product: Product) => {
     const updatedQuantity = product.quantity && product.quantity > 0 ? 0 : 1;
+    if (!product._id) return;
     dispatch(
       updateProduct({
-        productId: product._id as any,
+        productId: product._id,
         product: {
           ...product,
           quantity: updatedQuantity,
@@ -77,7 +78,7 @@ export default function ProductTable() {
     );
   };
 
-  const handleDeleteClick = (productId: number) => {
+  const handleDeleteClick = (productId: string) => {
     dispatch(deleteProduct(productId));
   };
 

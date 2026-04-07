@@ -56,7 +56,7 @@ export const updateOrderStatus = createAsyncThunk<Order,
   }
 );
 
-export const deleteOrder = createAsyncThunk<ApiResponse, { jwt: string, orderId: number }>(
+export const deleteOrder = createAsyncThunk<ApiResponse, { jwt: string, orderId: string }>(
   'sellerOrders/deleteOrder',
   async ({ jwt, orderId }, { rejectWithValue }) => {
     try {

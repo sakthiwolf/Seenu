@@ -9,7 +9,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 interface ChatBotProps{
     handleClose:(e:any)=>void;
-    productId?:number
+    productId?: string | number
 }
 
 const ChatBot = ({handleClose,productId}:ChatBotProps) => {

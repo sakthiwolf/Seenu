@@ -16,8 +16,6 @@ import ModeCommentIcon from "@mui/icons-material/ModeComment";
 import ChatBot from "../../ChatBot/ChatBot";
 
 interface ProductCardProps {
-  // images: string[];
-  // categoryId: string | undefined;
   item: Product;
   categoryId?: string;
 }
