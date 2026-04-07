@@ -7,8 +7,26 @@
 // }
 {
   "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* 🔥 VERY IMPORTANT FIXES */
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler",
+
+    /* Optional (for easy deploy) */
+    "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "strict": false
-  }
+
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": ["src"]
 }
