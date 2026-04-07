@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force normal cursor on general page areas */
+html, body {
+  cursor: default;
+}
+
+/* Keep expected cursors for interactive elements */
+a, button, [role="button"], .cursor-pointer {
+  cursor: pointer;
+}
+
+input, textarea, [contenteditable="true"] {
+  cursor: text;
+}
