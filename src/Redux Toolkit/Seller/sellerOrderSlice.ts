@@ -37,7 +37,7 @@ export const fetchSellerOrders = createAsyncThunk<Order[], string>(
 
 export const updateOrderStatus = createAsyncThunk<Order, 
 { jwt: string, 
-  orderId: number, 
+  orderId: string, 
   orderStatus: OrderStatus 
 }>(
   'sellerOrders/updateOrderStatus',

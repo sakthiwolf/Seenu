@@ -32,7 +32,7 @@ const SearchProducts = () => {
           <section className="grid sm:grid-cols-2   md:grid-cols-3 lg:grid-cols-4 gap-y-5 px-5 justify-center">
             {products.searchProduct.map((item: any, index: number) => (
               <div key={index * 9} className="">
-                <ProductCard item={item} />
+                <ProductCard item={item} categoryId={item.category?.categoryId ?? ''} />
               </div>
             ))}
           </section>

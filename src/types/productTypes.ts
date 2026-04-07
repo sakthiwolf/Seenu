@@ -9,7 +9,7 @@ export interface Category {
   }
 
 export interface Product {
-    _id?: number; // Optional since id is auto-generated
+    _id?: string; // Optional since id is auto-generated
     title: string;
     description: string;
     mrpPrice: number;
@@ -22,5 +22,6 @@ export interface Product {
     category?: Category; // Optional since a product might not have a category assigned yet
     seller?: Seller; // Placeholder for Seller interface (assuming it exists)
     createdAt?: Date; // Assuming LocalDateTime can be mapped to Date
+    categoryId?: string;
     sizes: string[]; // Array of strings for product sizes
   }

@@ -277,12 +277,11 @@ const AddProductForm: React.FC<AddProductFormProps> = ({
               value={formik.values.quantity}
               onChange={formik.handleChange}
               error={formik.touched.quantity && Boolean(formik.errors.quantity)}
-              helperText={formik.touched.quantity && formik.errors.quantity}
+              helperText={formik.touched.quantity ? String(formik.errors.quantity) : ''}
               required
             />
           </Grid>
-
-          <Grid size={{ xs: 12, sm: 6, lg: 2 }}>
+          <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
             <FormControl
               fullWidth
               error={formik.touched.color && Boolean(formik.errors.color)}
@@ -302,7 +301,7 @@ const AddProductForm: React.FC<AddProductFormProps> = ({
                 </MenuItem>
 
                 {colors.map((color) => (
-                  <MenuItem value={color.name}>
+                  <MenuItem key={color.name} value={color.name}>
                     <div className="flex gap-3">
                       <span
                         style={{ backgroundColor: color.hex }}
